@@ -1,0 +1,32 @@
+version: '1.0'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '4000:4000'
+    volumes:
+      - .:/usr/app
+    environment:
+      STAGE: dev
+
+    networks:
+      - auth-network
+
+  auth-db:
+    image: mysql:8.4.2
+
+    ports:
+      - '3306:3306'
+
+    env_file:
+      - ./env/db.env
+
+    networks:
+      - auth-network
+
+networks:
+  auth-network:
+    driver: bridge

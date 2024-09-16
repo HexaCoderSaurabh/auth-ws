@@ -1,0 +1,14 @@
+node_modules
+
+# Ignore test and coverage files
+coverage
+test
+*.test.ts
+*.spec.ts
+
+# Ignore build output (if you're using a separate build step in Docker)
+dist
+
+# Ignore Docker-specific files
+Dockerfile
+docker-compose.yml
