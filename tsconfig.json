@@ -8,6 +8,11 @@
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
     "sourceMap": true,
+    "paths": {
+      "@dtos/*": ["src/dtos/*"],
+      "@entities/*": ["src/entities/*"],
+      "@pipes/*": ["src/pipes/*"]
+    },
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,

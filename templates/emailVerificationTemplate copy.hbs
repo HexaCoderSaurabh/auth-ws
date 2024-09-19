@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      color: #fff;
+      background-color: #239573;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 260px;
+    }
+
+    .zoro {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-bottom: -5px;
+    }
+    </style>
+
+    <style>
+
+    .zoro img {
+      width: 80px;
+      height: 60px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #eee;
+    }
+
+    .message {
+      margin-bottom: 30px;
+    }
+
+    .verification-btn {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: #fff;
+      color: #1d7c5f;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="cid:logo" alt="Logo">
+    </div>
+    <h2>Email Verification</h2>
+    <div class="message">
+      <p>Dear User,</p>
+      <p>Thank you for registering with our service. Please click the button below to verify your email address.</p>
+    </div>
+    <div class="zoro" style="position: absolute; right: 100px; bottom: 93px;">
+      <img src="cid:zoro" alt="Zoro">
+    </div>
+    <a href="{{verificationURL}}" class="verification-btn">Verify Email</a>
+    <div class="footer">
+      <p>If you did not register with us, please ignore this email.</p>
+      <p>&copy; 2024 AnimeFlix. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+
+</html>

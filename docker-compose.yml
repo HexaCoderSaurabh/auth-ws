@@ -14,16 +14,17 @@ services:
 
     networks:
       - auth-network
+    depends_on:
+      - mysql
 
-  auth-db:
-    image: mysql:8.4.2
-
+  mysql:
+    image: mysql:9.0.1
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
     ports:
       - '3306:3306'
-
     env_file:
       - ./env/db.env
-
     networks:
       - auth-network
 
