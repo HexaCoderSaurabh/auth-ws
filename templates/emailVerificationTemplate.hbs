@@ -1,0 +1,71 @@
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Email Verification</title>
+  </head>
+
+  <body
+    style='font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;'
+  >
+
+    <!-- Container Table -->
+    <table
+      cellspacing='0'
+      cellpadding='0'
+      border='0'
+      width='100%'
+      style='max-width: 600px; margin: 20px auto; background-color: #239573; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); color: #fff;'
+    >
+      <tr>
+        <td style='padding: 20px;'>
+          <!-- Logo -->
+          <div style='text-align: center; margin-bottom: 20px;'>
+            <img src='cid:logo' alt='Logo' style='width: 260px;' />
+          </div>
+          <!-- Email Content -->
+          <h2 style='text-align: center; color: #eee;'>Email Verification</h2>
+          <div class='message' style='margin-bottom: 5px;'>
+            <p>Dear User,</p>
+            <p>Thank you for registering with our service. Please click the
+              button below to verify your email address.</p>
+          </div>
+          <!-- Verify Button -->
+          <table align='center'>
+            <tr style='position: relative; z-index: 20;'>
+              <td></td>
+              <td rowspan='2'>
+                <!-- Zoro Icon -->
+                <a
+                  href='{{verificationURL}}'
+                  style='display: inline-block; padding: 10px; background-color: #fff; color: #1d7c5f; text-decoration: none; border-radius: 5px; margin-top: 14px;width: 200px; text-align: center;'
+                >Verify Email</a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan='2'>
+                <img
+                  src='cid:zoro'
+                  alt='Zoro'
+                  style='width: 80px; height: 144px;'
+                />
+              </td>
+            </tr>
+          </table>
+          <!-- Footer -->
+          <div
+            class='footer'
+            style='text-align: center; font-size: 12px;'
+          >
+            <p style='margin-top: 0;' >If you did not register with us, please ignore this email.</p>
+            <p>&copy; 2024 AnimeFlix. All rights reserved.</p>
+          </div>
+        </td>
+      </tr>
+      <!-- Zoro Image -->
+    </table>
+
+  </body>
+
+</html>
