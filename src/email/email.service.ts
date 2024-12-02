@@ -24,6 +24,8 @@ export class EmailService {
       const address = `${protocol}://${ip}:${port}`;
 
       const verificationURL = `${address}/user/verify-email?token=${token}&username=${username}`;
+
+      // const verificationURL = '';
       const logoUrl = `cid:logo`;
       const zoroUrl = `cid:zoro`;
       const fileName = 'emailVerificationTemplate.hbs';

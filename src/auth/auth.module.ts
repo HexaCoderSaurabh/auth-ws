@@ -12,20 +12,21 @@ import { PassportModule } from '@nestjs/passport';
 import { LocalStrategy } from './strategies/local.strategy';
 import { SessionSerializer } from './serializers/session.serializer';
 import { JWTStrategy } from './strategies/jwt.strategy';
+import { RedisService } from 'src/redis/redis.service';
 
 @Module({
   imports: [
     UserModule,
     TypeOrmModule.forFeature([User]),
-    PassportModule.register({session: true}),
+    PassportModule.register({ session: false }),
     JwtModule.registerAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
         global: true,
-        secretOrKey: configService.get<string>('JWT_SECRET'),
-      }),
-    }),
+        secretOrKey: configService.get<string>('JWT_SECRET')
+      })
+    })
   ],
   controllers: [AuthController],
   providers: [
@@ -35,7 +36,8 @@ import { JWTStrategy } from './strategies/jwt.strategy';
     EmailService,
     LocalStrategy,
     JWTStrategy,
-    SessionSerializer
-  ],
+    SessionSerializer,
+    RedisService
+  ]
 })
 export class AuthModule {}

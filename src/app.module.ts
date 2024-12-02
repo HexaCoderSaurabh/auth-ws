@@ -8,6 +8,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { CustomNamingStrategy } from './helper/customNamingStrategy';
 import { EmailModule } from './email/email.module';
 import { AuthModule } from './auth/auth.module';
+import { RedisModule } from './redis/redis.module';
 @Module({
   imports: [
     UserModule,
@@ -42,7 +43,8 @@ import { AuthModule } from './auth/auth.module';
         };
         return asdf;
       }
-    })
+    }),
+    RedisModule
   ],
   controllers: [AppController],
   providers: [AppService]
